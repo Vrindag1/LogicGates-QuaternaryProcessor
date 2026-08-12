@@ -1,0 +1,127 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000018d63d694d0 .scope module, "tb_bit2LessThanEqualTo" "tb_bit2LessThanEqualTo" 2 1;
+ .timescale 0 0;
+v0000018d63dccfb0_0 .var "A", 1 0;
+v0000018d63dcde10_0 .var "B", 1 0;
+v0000018d63dcc290_0 .net "Y", 0 0, L_0000018d63d66530;  1 drivers
+v0000018d63dcc6f0_0 .var "expected", 0 0;
+v0000018d63dcd870_0 .var/i "i", 31 0;
+v0000018d63dcd4b0_0 .var/i "j", 31 0;
+S_0000018d63d2db40 .scope module, "uut" "bit2LessThanEqualTo" 2 5, 3 1 0, S_0000018d63d694d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 2 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+L_0000018d63d66760 .functor NOT 1, L_0000018d63dcd7d0, C4<0>, C4<0>, C4<0>;
+L_0000018d63d665a0 .functor NOT 1, L_0000018d63dcd910, C4<0>, C4<0>, C4<0>;
+L_0000018d63d66610 .functor AND 1, L_0000018d63d66760, L_0000018d63dccbf0, C4<1>, C4<1>;
+L_0000018d63d66a00 .functor AND 1, L_0000018d63d665a0, L_0000018d63dcce70, C4<1>, C4<1>;
+L_0000018d63d663e0 .functor AND 1, L_0000018d63d66a00, L_0000018d63d668b0, C4<1>, C4<1>;
+L_0000018d63d66a70 .functor AND 1, L_0000018d63d664c0, L_0000018d63d66450, C4<1>, C4<1>;
+L_0000018d63d668b0 .functor OR 1, L_0000018d63dccb50, L_0000018d63d66760, C4<0>, C4<0>;
+L_0000018d63d66920 .functor OR 1, L_0000018d63d663e0, L_0000018d63d66610, C4<0>, C4<0>;
+L_0000018d63d66ae0 .functor OR 1, L_0000018d63d66a70, L_0000018d63d66920, C4<0>, C4<0>;
+L_0000018d63d66450 .functor XNOR 1, L_0000018d63dcd9b0, L_0000018d63dcd730, C4<0>, C4<0>;
+L_0000018d63d664c0 .functor XNOR 1, L_0000018d63dccf10, L_0000018d63dcd370, C4<0>, C4<0>;
+L_0000018d63d66530 .functor BUFZ 1, L_0000018d63d66ae0, C4<0>, C4<0>, C4<0>;
+v0000018d63d65f40_0 .net "A", 1 0, v0000018d63dccfb0_0;  1 drivers
+v0000018d63d65ea0_0 .net "B", 1 0, v0000018d63dcde10_0;  1 drivers
+v0000018d63d65b80_0 .net "Y", 0 0, L_0000018d63d66530;  alias, 1 drivers
+v0000018d63d655e0_0 .net *"_ivl_1", 0 0, L_0000018d63dcd7d0;  1 drivers
+v0000018d63d661c0_0 .net *"_ivl_11", 0 0, L_0000018d63dcce70;  1 drivers
+v0000018d63d66080_0 .net *"_ivl_13", 0 0, L_0000018d63dccb50;  1 drivers
+v0000018d63d66120_0 .net *"_ivl_15", 0 0, L_0000018d63dcd9b0;  1 drivers
+v0000018d63d65d60_0 .net *"_ivl_17", 0 0, L_0000018d63dcd730;  1 drivers
+v0000018d63d65680_0 .net *"_ivl_19", 0 0, L_0000018d63dccf10;  1 drivers
+v0000018d63d65cc0_0 .net *"_ivl_21", 0 0, L_0000018d63dcd370;  1 drivers
+v0000018d63d659a0_0 .net *"_ivl_5", 0 0, L_0000018d63dcd910;  1 drivers
+v0000018d63d65400_0 .net *"_ivl_9", 0 0, L_0000018d63dccbf0;  1 drivers
+v0000018d63d66260_0 .net "w1", 0 0, L_0000018d63d66760;  1 drivers
+v0000018d63d65360_0 .net "w10", 0 0, L_0000018d63d66a70;  1 drivers
+v0000018d63d65a40_0 .net "w11", 0 0, L_0000018d63d66920;  1 drivers
+v0000018d63d65720_0 .net "w12", 0 0, L_0000018d63d664c0;  1 drivers
+v0000018d63d657c0_0 .net "w13", 0 0, L_0000018d63d66ae0;  1 drivers
+v0000018d63d65860_0 .net "w2", 0 0, L_0000018d63d665a0;  1 drivers
+v0000018d63d65900_0 .net "w5", 0 0, L_0000018d63d66610;  1 drivers
+v0000018d63dcdc30_0 .net "w6", 0 0, L_0000018d63d66a00;  1 drivers
+v0000018d63dccdd0_0 .net "w7", 0 0, L_0000018d63d663e0;  1 drivers
+v0000018d63dcd230_0 .net "w8", 0 0, L_0000018d63d668b0;  1 drivers
+v0000018d63dcdb90_0 .net "w9", 0 0, L_0000018d63d66450;  1 drivers
+L_0000018d63dcd7d0 .part v0000018d63dccfb0_0, 1, 1;
+L_0000018d63dcd910 .part v0000018d63dccfb0_0, 0, 1;
+L_0000018d63dccbf0 .part v0000018d63dcde10_0, 1, 1;
+L_0000018d63dcce70 .part v0000018d63dcde10_0, 0, 1;
+L_0000018d63dccb50 .part v0000018d63dcde10_0, 1, 1;
+L_0000018d63dcd9b0 .part v0000018d63dcde10_0, 1, 1;
+L_0000018d63dcd730 .part v0000018d63dccfb0_0, 1, 1;
+L_0000018d63dccf10 .part v0000018d63dcde10_0, 0, 1;
+L_0000018d63dcd370 .part v0000018d63dccfb0_0, 0, 1;
+    .scope S_0000018d63d694d0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "bit2LessThanEqualTo.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000018d63d694d0 {0 0 0};
+    %vpi_call 2 11 "$display", "========================================" {0 0 0};
+    %vpi_call 2 12 "$display", " A   B   Y   Expected   Status" {0 0 0};
+    %vpi_call 2 13 "$display", "========================================" {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000018d63dcd870_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0000018d63dcd870_0;
+    %cmpi/s 4, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000018d63dcd4b0_0, 0, 32;
+T_0.2 ;
+    %load/vec4 v0000018d63dcd4b0_0;
+    %cmpi/s 4, 0, 32;
+    %jmp/0xz T_0.3, 5;
+    %load/vec4 v0000018d63dcd870_0;
+    %pad/s 2;
+    %store/vec4 v0000018d63dccfb0_0, 0, 2;
+    %load/vec4 v0000018d63dcd4b0_0;
+    %pad/s 2;
+    %store/vec4 v0000018d63dcde10_0, 0, 2;
+    %delay 10, 0;
+    %load/vec4 v0000018d63dccfb0_0;
+    %load/vec4 v0000018d63dcde10_0;
+    %cmp/u;
+    %flag_get/vec4 4;
+    %flag_get/vec4 5;
+    %or;
+    %store/vec4 v0000018d63dcc6f0_0, 0, 1;
+    %load/vec4 v0000018d63dcc290_0;
+    %load/vec4 v0000018d63dcc6f0_0;
+    %cmp/e;
+    %jmp/0xz  T_0.4, 4;
+    %vpi_call 2 25 "$display", "%2d  %2d   %b      %b       PASS", v0000018d63dccfb0_0, v0000018d63dcde10_0, v0000018d63dcc290_0, v0000018d63dcc6f0_0 {0 0 0};
+    %jmp T_0.5;
+T_0.4 ;
+    %vpi_call 2 28 "$display", "%2d  %2d   %b      %b       FAIL", v0000018d63dccfb0_0, v0000018d63dcde10_0, v0000018d63dcc290_0, v0000018d63dcc6f0_0 {0 0 0};
+T_0.5 ;
+    %load/vec4 v0000018d63dcd4b0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0000018d63dcd4b0_0, 0, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    %load/vec4 v0000018d63dcd870_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0000018d63dcd870_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %vpi_call 2 33 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_2bitLessThanEqualTo.v";
+    "2bitlessThanEqualTo.v";
